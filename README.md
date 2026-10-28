@@ -46,3 +46,15 @@ The reported image size decreased by approximately 87%.
 - Verified the image could be pulled from Docker Hub and run.
 - Health endpoint confirmed `database: true`, the required registration number, and version `1.0.0`.
 
+
+## Stage 5 — Image Signing and Verification
+
+- Generated a Cosign key pair for image signing.
+- Signed the published image by digest:
+  `docker.io/chahatup/fest-backend@sha256:764112d9759338ec8cfbc52a2d0f450712ec4acc27c8fb812256a98668065df7`
+- Verified the signature with `cosign.pub`.
+- The verification confirmed the signature, claims, and transparency-log entry.
+- Negative test: the unsigned `1.0.1` image must fail signature verification.
+- The private key (`cosign.key`) is excluded from Git and must never be uploaded.
+- The public verification key is stored as `cosign.pub`.
+

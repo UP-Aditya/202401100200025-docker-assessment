@@ -4,3 +4,7 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# Cosign private signing key
+cosign.key
+
