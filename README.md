@@ -34,3 +34,15 @@ The reported image size decreased by approximately 87%.
 - `reports/trivy-before.txt`
 - `reports/trivy-after.txt`
 
+
+## Stage 4 — Publish and Verify Release Image
+
+- Docker Hub repository: https://hub.docker.com/r/chahatup/fest-backend
+- Published tags:
+  - `chahatup/fest-backend:1.0.0`
+  - `chahatup/fest-backend:1.0`
+- Image digest: `sha256:764112d9759338ec8cfbc52a2d0f450712ec4acc27c8fb812256a98668065df7`
+- Compose now uses the published `1.0.0` image.
+- Verified the image could be pulled from Docker Hub and run.
+- Health endpoint confirmed `database: true`, the required registration number, and version `1.0.0`.
+
